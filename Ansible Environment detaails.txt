@@ -1,0 +1,26 @@
+'
+[root@pobu01lx00172b ~]# ansible-galaxy --version
+ansible-galaxy 2.9.27
+  config file = /root/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/sha                                                                             re/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-galaxy
+  python version = 2.7.5 (default, May 27 2022, 11:27:32) [GCC 4.8.5 20150623 (R                                                                             ed Hat 4.8.5-44)]
+
+
+
+inventory = ./inventory
+remote_user = root
+forks          = 25
+gather_subset = min
+gather_timeout = 30
+host_key_checking = False
+callback_whitelist = timer, profile_tasks
+[persistent_connection]
+command_timeout = 300
+connect_timeout = 100
+connect_retry_timeout = 100
+
+
+ansible --version
+ansible -m command -a uptime <host pattern>
